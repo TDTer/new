@@ -56,6 +56,8 @@ void InsertAfterP(Node *e, Node *p){
         e->prev=p;
         p->next->prev=e;
         p->next=e;
+        if(L.tail==p)
+            L.tail = e;
    }
 }
 
